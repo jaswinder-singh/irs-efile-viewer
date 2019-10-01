@@ -10,11 +10,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #4684ee;
+    background-color: #fff;
 }
 
 .loader {
-    color: #fff;
+    color: #4684ee;
     font-family: Consolas, Menlo, Monaco, monospace;
     font-weight: bold;
     font-size: 30vh;

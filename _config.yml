@@ -4,6 +4,5 @@ exclude: [
   'Gemfile.lock',
   'GEMFILE',
   '.gitignore',
-  'LICENSE',
-  '201541349349307794_public.xml'
+  'LICENSE'
 ]

@@ -1,3 +1,5 @@
+github:
+  url: https://jaswinder-singh.github.io/irs-efile-viewer/
 exclude: [
   'README.md',
   '**/README.md',

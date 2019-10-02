@@ -14,7 +14,7 @@ body {
 }
 
 
-.cssload-loader {
+.css-loader {
 	width: 244px;
 	height: 49px;
 	line-height: 49px;
@@ -33,29 +33,29 @@ body {
 	color: rgb(214,118,0);
 	letter-spacing: 0.2em;
 }
-.cssload-loader::before, .cssload-loader::after {
+.css-loader::before, .css-loader::after {
 	content: "";
 	display: block;
 	width: 15px;
 	height: 15px;
 	background: rgb(214,118,0);
 	position: absolute;
-	animation: cssload-load 0.81s infinite alternate ease-in-out;
-		-o-animation: cssload-load 0.81s infinite alternate ease-in-out;
-		-ms-animation: cssload-load 0.81s infinite alternate ease-in-out;
-		-webkit-animation: cssload-load 0.81s infinite alternate ease-in-out;
-		-moz-animation: cssload-load 0.81s infinite alternate ease-in-out;
+	animation: css-load 0.81s infinite alternate ease-in-out;
+		-o-animation: css-load 0.81s infinite alternate ease-in-out;
+		-ms-animation: css-load 0.81s infinite alternate ease-in-out;
+		-webkit-animation: css-load 0.81s infinite alternate ease-in-out;
+		-moz-animation: css-load 0.81s infinite alternate ease-in-out;
 }
-.cssload-loader::before {
+.css-loader::before {
 	top: 0;
 }
-.cssload-loader::after {
+.css-loader::after {
 	bottom: 0;
 }
 
 
 
-@keyframes cssload-load {
+@keyframes css-load {
 	0% {
 		left: 0;
 		height: 29px;
@@ -72,7 +72,7 @@ body {
 	}
 }
 
-@-o-keyframes cssload-load {
+@-o-keyframes css-load {
 	0% {
 		left: 0;
 		height: 29px;
@@ -89,7 +89,7 @@ body {
 	}
 }
 
-@-ms-keyframes cssload-load {
+@-ms-keyframes css-load {
 	0% {
 		left: 0;
 		height: 29px;
@@ -106,7 +106,7 @@ body {
 	}
 }
 
-@-webkit-keyframes cssload-load {
+@-webkit-keyframes css-load {
 	0% {
 		left: 0;
 		height: 29px;
@@ -123,7 +123,7 @@ body {
 	}
 }
 
-@-moz-keyframes cssload-load {
+@-moz-keyframes css-load {
 	0% {
 		left: 0;
 		height: 29px;

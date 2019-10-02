@@ -258,7 +258,7 @@ function generateAndDisplayForm(formId, dest) {
         if(dest) {
             $('#'+dest).attr('src', 'data:text/html;charset=utf-8,' + encodeURIComponent(custom_render_style) + encodeURIComponent(formHtml));
         } else {
-            destWindow.document.write(formHtml);
+            destWindow.document.write(custom_render_style + formHtml);
             destWindow.document.close();
             destWindow.history.replaceState(null, null, location.href.replace(location.hash, '')+'#'+formId);
         }

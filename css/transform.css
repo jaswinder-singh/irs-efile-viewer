@@ -361,6 +361,8 @@ footer {
 }
 
 .dragndrop {
+    width: 60%;
+    margin: auto;
     outline: 2px dashed #92b0b3;
     outline-offset: -10px;
     -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
@@ -383,5 +385,3 @@ footer {
 .dragndrop > label > span {
     display: inline-block;
 }
-
-

@@ -10,7 +10,7 @@
   <UserPreferences>
     <View>
       <ShowReturnSummaryOnStartup>true</ShowReturnSummaryOnStartup>
-      <DefaultZoomLevel>150%</DefaultZoomLevel>
+      <DefaultZoomLevel>130%</DefaultZoomLevel>
       <ReturnTreeMouseoverBgColor>khaki</ReturnTreeMouseoverBgColor>
       <ReturnTreeSelectedItemBgColor>gold</ReturnTreeSelectedItemBgColor>
       <ErrorFieldBgColor>Tomato</ErrorFieldBgColor>
@@ -38,7 +38,7 @@
     <DocumentId></DocumentId>
     <!-- ReturnVersion is the schema version of the form being rendered -->
     <ReturnVersion></ReturnVersion>
-    <ZoomLevel>150%</ZoomLevel>
+    <ZoomLevel>130%</ZoomLevel>
     <DisplayName>IRS e-File Render</DisplayName>
     <Regulation />
     <!-- The Location element locates the subreturn (consolidated, parent or subsidiary) -->

@@ -71,7 +71,7 @@ div + h1 {
   display: block;
   border-bottom: 1px solid #c9c9c9;
 }
-  .nav-secondary > a {
+  .nav-secondary > span {
     display: inline-block;
     font-weight: 700;
     padding: 1em;

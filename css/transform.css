@@ -295,11 +295,11 @@ input[type="file"] {
   padding: 0.7em;
   display: inline-block;
 }
-  #forms-list > li > a:hover {
+  #forms-list > li:hover {
     text-decoration: none;
     outline: -webkit-focus-ring-color auto 3px;
   }
-  #forms-list > li > a:hover > span + span {
+  #forms-list > li:hover > a > span + span {
     text-decoration: underline;
   }
 #forms-list > li i.fa {

@@ -254,7 +254,7 @@ function generateAndDisplayForm(formId, dest) {
     }
     loadXML(stylesheetPath).then(function(stylesheet) {
         var formHtml = render(templateDom, stylesheet);
-        var custom_render_style = "<style type='text/css'>span[id^="/AppData"]{color: blue!important; font-size: 10px; font-weight: bold; font-family: Courier New, Arial, san-serif;}</style>"
+        var custom_render_style = "<style type='text/css'>span[id^='/AppData']{color: blue!important; font-size: 10px; font-weight: bold; font-family: Courier New, Arial, san-serif;}</style>"
         if(dest) {
             $('#'+dest).attr('src', 'data:text/html;charset=utf-8,' + encodeURIComponent(custom_render_style) + encodeURIComponent(formHtml));
         } else {

@@ -283,7 +283,7 @@ input[type="file"] {
 #forms-list > li span:first-child {
   display: inline-block;
   background-color: #DCE4E7;
-  width: 100%;
+  width: 10%;
   height: 3em;
   line-height: 3em;
   text-align: center;

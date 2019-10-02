@@ -7,7 +7,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  background: #f8f8f8;
+  background: #fff;
   color: #303438;
   font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
   margin: 0;
@@ -45,8 +45,8 @@ div + h1 {
 .header {
   width: 100%;
   display: block;
-  background-color: #303438;
-  color: #f8f8f8;
+  background-color: #24292e;
+  color: #fff;
 }
   .header > a {
     margin: 1em;
@@ -69,7 +69,8 @@ div + h1 {
 .nav-secondary {
   width: 100%;
   display: block;
-  border-bottom: 1px solid #c9c9c9;
+  background-color:#fafbfc;
+  border-bottom: 1px solid #e1e4e8;
 }
   .nav-secondary > span {
     display: inline-block;

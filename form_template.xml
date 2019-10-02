@@ -2,7 +2,7 @@
 <AppData>
   <ApplicationProperties>
     <!-- FormHeaderGeneric, FHOriginalData, and SystemMode are used to display a generic header -->
-    <FormHeaderGeneric> efile Public Visual Render </FormHeaderGeneric>
+    <FormHeaderGeneric> IRS E-File Render </FormHeaderGeneric>
     <FormHeaderOriginalData>Submission Date</FormHeaderOriginalData>
     <SystemMode></SystemMode>
     <PrintoutWindowResizable>false</PrintoutWindowResizable>
@@ -39,7 +39,7 @@
     <!-- ReturnVersion is the schema version of the form being rendered -->
     <ReturnVersion></ReturnVersion>
     <ZoomLevel>100%</ZoomLevel>
-    <DisplayName>IRS 990 e-File Render</DisplayName>
+    <DisplayName>IRS e-File Render</DisplayName>
     <Regulation />
     <!-- The Location element locates the subreturn (consolidated, parent or subsidiary) -->
     <!-- in which the return document is located. Possible values are RET, PAR, and SUB -->

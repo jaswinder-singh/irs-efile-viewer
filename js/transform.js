@@ -142,7 +142,8 @@ function getDisplayName(formName, short) {
             return '990';
         } else {
             if(formName.match(/Schedule[A-Z]$/)) {
-                return formName.charAt(formName.length-1);
+                return $('<i>').attr({'class': 'fa fa-file-text-o', 'aria-hidden': true, 'title': 'Form with a Schedule letter'});
+                //return formName.charAt(formName.length-1);
             } else {
                 return $('<i>').attr({'class': 'fa fa-file-text-o', 'aria-hidden': true, 'title': 'Form without Schedule letter'});
             }

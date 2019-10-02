@@ -275,25 +275,25 @@ input[type="file"] {
 
 #forms-list > li {
   list-style-type: none;
-  background-color: #DCE4E7;
+  background-color: #efefef;
   margin: 5px;
   float: left;
-  width: 23.5%;
+  width: 47.5%;
 }
 #forms-list > li span:first-child {
-  display: block;
-  background-color: #efefef;
+  display: inline-block;
+  background-color: #DCE4E7;
   width: 100%;
-  height: 6em;
-  line-height: 6em;
+  height: 3em;
+  line-height: 3em;
   text-align: center;
-  font-size: 2em;
+  font-size: 1em;
   font-family: "Merriweather",serif;
   color: #303438;
 }
 #forms-list > li span + span {
   padding: 0.7em;
-  display: block;
+  display: inline-block;
 }
   #forms-list > li > a:hover {
     text-decoration: none;
@@ -303,12 +303,12 @@ input[type="file"] {
     text-decoration: underline;
   }
 #forms-list > li i.fa {
-  font-size: 1.7em;
+  font-size: 1.5em;
 }
 @media screen and (max-width: 600px) {
 	#forms-list > li {
 		float: none;
-		display: block;
+		display: inline-block;
     margin-bottom: 10px;
 		width: 100%;
 	}

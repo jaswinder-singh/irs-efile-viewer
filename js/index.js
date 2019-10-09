@@ -1,5 +1,5 @@
----
----
+-- -
+-- -
 $(function() {
     $('#file-input').change(loadFile);
     $('#url-form').submit(loadURL);
@@ -21,7 +21,7 @@ function loadFile() {
         // between users/sessions.
         var newId = uniqueId();
         sessionStorage.setItem(newId, fileText);
-        sessionStorage.setItem(newId+'_name', myFile.name);
+        sessionStorage.setItem(newId + '_name', myFile.name);
 
         location.href = '{{ site.github.url }}/transform.html?h=' + newId;
     }).catch(function(err) {
@@ -32,43 +32,45 @@ function loadFile() {
 }
 
 // Enables Drag & Drop Functionality
-var $form = $('.file-upload');
-$form.on('drag dragstart dragend dragover dragenter dragleave drop', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-})
-.on('dragover dragenter', function() {
-    $form.addClass('is-dragover');
-})
-.on('dragleave dragend drop', function() {
-    $form.removeClass('is-dragover');
-})
-.on('drop', function(e) {
-    resetErrors();
-    droppedFiles = e.originalEvent.dataTransfer.files[0];
-    readXML(myFile).then(function(fileText) {
-        // We could use the filename as the identifier. However
-        // multiple clients could have conflicts on filenames for
-        // files that are not identical to each other. This has the
-        // potential to be confusing if URLs are copied/pasted
-        // between users/sessions.
-        var newId = uniqueId();
-        sessionStorage.setItem(newId, fileText);
-        sessionStorage.setItem(newId+'_name', myFile.name);
+$(function() {
+    var $form = $('.dragndrop');
+    $form.on('drag dragstart dragend dragover dragenter dragleave drop', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        })
+        .on('dragover dragenter', function() {
+            $form.addClass('is-dragover');
+        })
+        .on('dragleave dragend drop', function() {
+            $form.removeClass('is-dragover');
+        })
+        .on('drop', function(e) {
+            resetErrors();
+            droppedFiles = e.originalEvent.dataTransfer.files[0];
+            readXML(myFile).then(function(fileText) {
+                // We could use the filename as the identifier. However
+                // multiple clients could have conflicts on filenames for
+                // files that are not identical to each other. This has the
+                // potential to be confusing if URLs are copied/pasted
+                // between users/sessions.
+                var newId = uniqueId();
+                sessionStorage.setItem(newId, fileText);
+                sessionStorage.setItem(newId + '_name', myFile.name);
 
-        location.href = '{{ site.github.url }}/transform.html?h=' + newId;
-    }).catch(function(err) {
-        $('#file-error').text(err);
-        $('#file-input + label').addClass('error');
-        console.log(err);
-    });
+                location.href = '{{ site.github.url }}/transform.html?h=' + newId;
+            }).catch(function(err) {
+                $('#file-error').text(err);
+                $('#file-input + label').addClass('error');
+                console.log(err);
+            });
+        });
 });
 
 // A Promise that reads a file from the user and provides the string
 // text on success.
 function readXML(file) {
-    return new Promise (function(resolve, reject) {
-        if(!file.type.match(/.*xml/)) {
+    return new Promise(function(resolve, reject) {
+        if (!file.type.match(/.*xml/)) {
             reject(Error('Filetype not supported. Please select an XML file.'));
         } else {
             var reader = new FileReader();
@@ -90,7 +92,7 @@ function loadURL(e) {
     resetErrors();
     var url = $('#url-input').val();
     getContentType(url).then(function(contentType) {
-        if(contentType.match(/.*xml/)) {
+        if (contentType.match(/.*xml/)) {
             location.href = '{{ site.github.url }}/transform.html?f=' + encodeURIComponent(url);
         } else {
             throw Error('The URL provided doesn\'t appear to be an IRS XML e-file document.');
@@ -104,8 +106,8 @@ function loadURL(e) {
 
 // A Promise that checks the Content-Type of a request
 function getContentType(url) {
-    return new Promise (function(resolve, reject) {
-        if(!url) {
+    return new Promise(function(resolve, reject) {
+        if (!url) {
             reject(Error('No file was requested.'));
             return;
         }
@@ -113,7 +115,7 @@ function getContentType(url) {
         var request = new XMLHttpRequest();
         request.open('HEAD', url);
         request.onload = function() {
-            if(request.status === 200) {
+            if (request.status === 200) {
                 resolve(request.getResponseHeader('Content-Type'));
             } else {
                 reject(Error('Error Code: ' + request.status + ' (' + request.statusText + ')'));
@@ -142,7 +144,7 @@ function resetErrors() {
 
 // Event handler for resetting errors
 function checkIfRemoveErrors() {
-    if(!this.value) {
+    if (!this.value) {
         resetErrors();
     }
 }
@@ -158,8 +160,8 @@ function checkIfRemoveErrors() {
 //
 // via https://gist.github.com/gordonbrander/2230317
 function uniqueId() {
-  // Math.random should be unique because of its seeding algorithm.
-  // Convert it to base 36 (numbers + letters), and grab the first 9
-  // characters after the decimal.
-  return '_' + Math.random().toString(36).substr(2, 9);
+    // Math.random should be unique because of its seeding algorithm.
+    // Convert it to base 36 (numbers + letters), and grab the first 9
+    // characters after the decimal.
+    return '_' + Math.random().toString(36).substr(2, 9);
 };

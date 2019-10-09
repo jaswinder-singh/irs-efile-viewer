@@ -32,7 +32,7 @@ function loadFile() {
 }
 
 // Enables Drag & Drop Functionality
-var $form = $('.dragndrop');
+var $form = $('.file-upload');
 $form.on('drag dragstart dragend dragover dragenter dragleave drop', function(e) {
     e.preventDefault();
     e.stopPropagation();

@@ -1,141 +1,144 @@
 /* https://codepen.io/ashmind/pen/zqaqpB */
-html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
 }
-
 
 .css-loader {
-	width: 244px;
-	height: 49px;
-	line-height: 49px;
-	text-align: center;
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%, -50%);
-		-o-transform: translate(-50%, -50%);
-		-ms-transform: translate(-50%, -50%);
-		-webkit-transform: translate(-50%, -50%);
-		-moz-transform: translate(-50%, -50%);
-	font-family: helvetica, arial, sans-serif;
-	text-transform: uppercase;
-	font-weight: 900;
-	font-size:18px;
-	color: rgb(214,118,0);
-	letter-spacing: 0.2em;
+  width: 244px;
+  height: 49px;
+  line-height: 49px;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  font-family: helvetica, arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 18px;
+  color: rgb(214, 118, 0);
+  letter-spacing: 0.2em;
 }
-.css-loader::before, .css-loader::after {
-	content: "";
-	display: block;
-	width: 15px;
-	height: 15px;
-	background: rgb(214,118,0);
-	position: absolute;
-	animation: css-load 0.81s infinite alternate ease-in-out;
-		-o-animation: css-load 0.81s infinite alternate ease-in-out;
-		-ms-animation: css-load 0.81s infinite alternate ease-in-out;
-		-webkit-animation: css-load 0.81s infinite alternate ease-in-out;
-		-moz-animation: css-load 0.81s infinite alternate ease-in-out;
-}
-.css-loader::before {
-	top: 0;
-}
+
+.css-loader::before,
 .css-loader::after {
-	bottom: 0;
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: rgb(214, 118, 0);
+  position: absolute;
+  animation: css-load 0.81s infinite alternate ease-in-out;
+  -o-animation: css-load 0.81s infinite alternate ease-in-out;
+  -ms-animation: css-load 0.81s infinite alternate ease-in-out;
+  -webkit-animation: css-load 0.81s infinite alternate ease-in-out;
+  -moz-animation: css-load 0.81s infinite alternate ease-in-out;
 }
 
+.css-loader::before {
+  top: 0;
+}
 
+.css-loader::after {
+  bottom: 0;
+}
 
 @keyframes css-load {
-	0% {
-		left: 0;
-		height: 29px;
-		width: 15px;
-	}
-	50% {
-		height: 8px;
-		width: 39px;
-	}
-	100% {
-		left: 229px;
-		height: 29px;
-		width: 15px;
-	}
+  0% {
+    left: 0;
+    height: 29px;
+    width: 15px;
+  }
+  50% {
+    height: 8px;
+    width: 39px;
+  }
+  100% {
+    left: 229px;
+    height: 29px;
+    width: 15px;
+  }
 }
 
 @-o-keyframes css-load {
-	0% {
-		left: 0;
-		height: 29px;
-		width: 15px;
-	}
-	50% {
-		height: 8px;
-		width: 39px;
-	}
-	100% {
-		left: 229px;
-		height: 29px;
-		width: 15px;
-	}
+  0% {
+    left: 0;
+    height: 29px;
+    width: 15px;
+  }
+  50% {
+    height: 8px;
+    width: 39px;
+  }
+  100% {
+    left: 229px;
+    height: 29px;
+    width: 15px;
+  }
 }
 
 @-ms-keyframes css-load {
-	0% {
-		left: 0;
-		height: 29px;
-		width: 15px;
-	}
-	50% {
-		height: 8px;
-		width: 39px;
-	}
-	100% {
-		left: 229px;
-		height: 29px;
-		width: 15px;
-	}
+  0% {
+    left: 0;
+    height: 29px;
+    width: 15px;
+  }
+  50% {
+    height: 8px;
+    width: 39px;
+  }
+  100% {
+    left: 229px;
+    height: 29px;
+    width: 15px;
+  }
 }
 
 @-webkit-keyframes css-load {
-	0% {
-		left: 0;
-		height: 29px;
-		width: 15px;
-	}
-	50% {
-		height: 8px;
-		width: 39px;
-	}
-	100% {
-		left: 229px;
-		height: 29px;
-		width: 15px;
-	}
+  0% {
+    left: 0;
+    height: 29px;
+    width: 15px;
+  }
+  50% {
+    height: 8px;
+    width: 39px;
+  }
+  100% {
+    left: 229px;
+    height: 29px;
+    width: 15px;
+  }
 }
 
 @-moz-keyframes css-load {
-	0% {
-		left: 0;
-		height: 29px;
-		width: 15px;
-	}
-	50% {
-		height: 8px;
-		width: 39px;
-	}
-	100% {
-		left: 229px;
-		height: 29px;
-		width: 15px;
-	}
+  0% {
+    left: 0;
+    height: 29px;
+    width: 15px;
+  }
+  50% {
+    height: 8px;
+    width: 39px;
+  }
+  100% {
+    left: 229px;
+    height: 29px;
+    width: 15px;
+  }
 }

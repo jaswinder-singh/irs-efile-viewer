@@ -24,6 +24,9 @@
 
 <body style="background-color: #e5edf1">
     <h1 style="margin-bottom: 1em;">View IRS E-Files</h1>
+    <div class="help-tip">
+        <p>All e-filed forms accepted by IRS are supported. Does not support state efile visualzation yet.</p>
+    </div>
     <div class="file-upload">
         <input type="file" name="file-input" id="file-input">
         <div class="dragndrop">
@@ -34,6 +37,10 @@
         </label-->
         <p id="file-error"></p>
     </div>
+    <footer>
+        <strong>Disclaimer</strong> - No data is uploaded to the server, XMLs are processed inside your browser using javascript.
+        <br><small>This tool is based on IRS 990 form efile viewer by <a href="https://github.com/betson">@betson</a>
+    </footer>
 </body>
 
 </html>

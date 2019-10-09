@@ -31,6 +31,39 @@ function loadFile() {
     });
 }
 
+// Enables Drag & Drop Functionality
+var $form = $('.dragndrop');
+$form.on('drag dragstart dragend dragover dragenter dragleave drop', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+})
+.on('dragover dragenter', function() {
+    $form.addClass('is-dragover');
+})
+.on('dragleave dragend drop', function() {
+    $form.removeClass('is-dragover');
+})
+.on('drop', function(e) {
+    resetErrors();
+    droppedFiles = e.originalEvent.dataTransfer.files[0];
+    readXML(myFile).then(function(fileText) {
+        // We could use the filename as the identifier. However
+        // multiple clients could have conflicts on filenames for
+        // files that are not identical to each other. This has the
+        // potential to be confusing if URLs are copied/pasted
+        // between users/sessions.
+        var newId = uniqueId();
+        sessionStorage.setItem(newId, fileText);
+        sessionStorage.setItem(newId+'_name', myFile.name);
+
+        location.href = '{{ site.github.url }}/transform.html?h=' + newId;
+    }).catch(function(err) {
+        $('#file-error').text(err);
+        $('#file-input + label').addClass('error');
+        console.log(err);
+    });
+});
+
 // A Promise that reads a file from the user and provides the string
 // text on success.
 function readXML(file) {

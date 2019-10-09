@@ -385,3 +385,9 @@ footer {
 .dragndrop > label > span {
     display: inline-block;
 }
+
+.is-dragover {
+    outline-offset: -20px;
+    outline-color: #c8dadf;
+    background-color: #fff;
+}

@@ -1,5 +1,5 @@
--- -
--- -
+---
+---
 $(function() {
     $('#file-input').change(loadFile);
     $('#url-form').submit(loadURL);

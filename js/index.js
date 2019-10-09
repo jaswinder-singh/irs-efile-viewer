@@ -34,6 +34,7 @@ function loadFile() {
 // Enables Drag & Drop Functionality
 $(function() {
     var $form = $('.dragndrop');
+    var droppedFile = false;
     $form.on('drag dragstart dragend dragover dragenter dragleave drop', function(e) {
             e.preventDefault();
             e.stopPropagation();
@@ -46,8 +47,8 @@ $(function() {
         })
         .on('drop', function(e) {
             resetErrors();
-            droppedFiles = e.originalEvent.dataTransfer.files[0];
-            readXML(myFile).then(function(fileText) {
+            droppedFile = e.originalEvent.dataTransfer.files[0];
+            readXML(droppedFile).then(function(fileText) {
                 // We could use the filename as the identifier. However
                 // multiple clients could have conflicts on filenames for
                 // files that are not identical to each other. This has the
@@ -55,7 +56,7 @@ $(function() {
                 // between users/sessions.
                 var newId = uniqueId();
                 sessionStorage.setItem(newId, fileText);
-                sessionStorage.setItem(newId + '_name', myFile.name);
+                sessionStorage.setItem(newId + '_name', droppedFile.name);
 
                 location.href = '{{ site.github.url }}/transform.html?h=' + newId;
             }).catch(function(err) {

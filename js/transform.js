@@ -265,7 +265,7 @@ function generateAndDisplayForm(formId, dest) {
     }).catch(function(error) {
         console.log(error);
         if(destWindow) {
-            destWindow.close();
+            //destWindow.close();
         }
         displayFormError('There was a problem generating ' + getDisplayName(formId) + '.', formId);
     });

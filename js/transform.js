@@ -254,7 +254,6 @@ function generateAndDisplayForm(formId, dest) {
     }
     loadXML(stylesheetPath).then(function(stylesheet) {
         var formHtml = render(templateDom, stylesheet);
-		alert(formHtml);
         var custom_render_style = "<style type='text/css'>span[id^='/AppData']{color: blue!important; font-size: 10px; font-weight: bold; font-family: Courier New, Arial, san-serif;}.styTableCellText{height: 14px!important;}</style>"
         if(dest) {
             $('#'+dest).attr('src', 'data:text/html;charset=utf-8,' + encodeURIComponent(custom_render_style) + encodeURIComponent(formHtml));
@@ -266,7 +265,7 @@ function generateAndDisplayForm(formId, dest) {
     }).catch(function(error) {
         console.log(error);
         if(destWindow) {
-            //destWindow.close();
+            destWindow.close();
         }
         displayFormError('There was a problem generating ' + getDisplayName(formId) + '.', formId);
     });

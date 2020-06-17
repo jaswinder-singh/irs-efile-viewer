@@ -89,7 +89,8 @@
   @media print {
     .sty1040NRLandDiv {
       transform: rotate(-90deg);
-      margin-left:70mm;
+      margin-left:75mm;
+      padding-top:0mm;
     }
   }
   </xsl:template>

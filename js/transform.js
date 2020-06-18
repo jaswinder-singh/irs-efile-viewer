@@ -136,8 +136,8 @@ function getDisplayName(formName, short) {
     // Schedule.
     // Format is influenced by https://stackoverflow.com/a/7376612
     var isPrimary990Form = /^(?:(?!\d990).)*990(?!\d)(?!Schedule)/;
-	var isPrimary1065Form = /^(?:(?!\d1065).)*1065(?!\d)(?!Schedule)/;
-	var isPrimary1120Form = /^(?:(?!\d1120).)*1120(?!\d)(?!Schedule)/;
+    var isPrimary1065Form = /^(?:(?!\d1065).)*1065(?!\d)(?!Schedule)/;
+    var isPrimary1120Form = /^(?:(?!\d1120).)*1120(?!\d)(?!Schedule)/;
 
     if(short) {
         if(formName.match(isPrimary990Form)) {

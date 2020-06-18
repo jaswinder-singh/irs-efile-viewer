@@ -142,9 +142,9 @@ function getDisplayName(formName, short) {
     if(short) {
         if(formName.match(isPrimary990Form)) {
             return '990';
-        } if(formName.match(isPrimary1065Form)) {
+        } else if(formName.match(isPrimary1065Form)) {
             return '1065';
-        } if(formName.match(isPrimary1120Form)) {
+        } else if(formName.match(isPrimary1120Form)) {
             return '1120';
         } else {
             if(formName.match(/Schedule[A-Z]$/)) {

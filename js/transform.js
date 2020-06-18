@@ -136,14 +136,20 @@ function getDisplayName(formName, short) {
     // Schedule.
     // Format is influenced by https://stackoverflow.com/a/7376612
     var isPrimary990Form = /^(?:(?!\d990).)*990(?!\d)(?!Schedule)/;
+	var isPrimary1065Form = /^(?:(?!\d1065).)*1065(?!\d)(?!Schedule)/;
+	var isPrimary1120Form = /^(?:(?!\d1120).)*1120(?!\d)(?!Schedule)/;
 
     if(short) {
         if(formName.match(isPrimary990Form)) {
             return '990';
+        } if(formName.match(isPrimary1065Form)) {
+            return '1065';
+        } if(formName.match(isPrimary1120Form)) {
+            return '1120';
         } else {
             if(formName.match(/Schedule[A-Z]$/)) {
-                return $('<i>').attr({'class': 'fa fa-file-text-o', 'aria-hidden': true, 'title': 'Form with a Schedule letter'});
-                //return formName.charAt(formName.length-1);
+                //return $('<i>').attr({'class': 'fa fa-file-text-o', 'aria-hidden': true, 'title': 'Form with a Schedule letter'});
+                return formName.charAt(formName.length-1);
             } else {
                 return $('<i>').attr({'class': 'fa fa-file-text-o', 'aria-hidden': true, 'title': 'Form without Schedule letter'});
             }
@@ -154,6 +160,10 @@ function getDisplayName(formName, short) {
         var name = formName.replace(/^IRS/, '');
         if(name.match(isPrimary990Form)) {
             return name.replace(/(990)/, '$1 ');
+        } else if(name.match(isPrimary990Form)) {
+            return name.replace(/(1065)/, '$1 ');
+        } else if(name.match(isPrimary990Form)) {
+            return name.replace(/(1120)/, '$1 ');
         }
         return name.replace(/([A-Z])/g, ' $1');
     }
